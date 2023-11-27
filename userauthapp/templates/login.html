@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    <div class="login-page">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <h3>LOGIN</h3>
+              <p>Please enter your credentials to login.</p>
+            </div>
+          </div>
+          <form class="login-form" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <input type="text" id="username" name="username" placeholder="username"  required/>
+            <input type="password" id="passwd" name="passwd" placeholder="password" required/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="/create/">Create an account</a></p>
+          </form>
+          {% if messages %}
+          {% for messages in messages %}
+          <p style="color: red;">{{ messages }}</p>
+            {% endfor %}
+        {% endif %}
+        </div>
+      </div>
+{% endblock %}
