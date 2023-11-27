@@ -7,12 +7,12 @@ This repository demonstrates how to implement user authentication in a Django we
 1. Clone the repository:
 
    ```
-   git clone https://github.com/RajaulAnsari/DjangoUserLoginAuth.git
+   git clone https://github.com/RajaulAnsari/UserAuthenticationWithDjango.git
    
 2. Navigate to the project directory:
 
    ```
-   cd DjangoUserLoginAuth
+   cd UserAuthenticationWithDjango
 
 3. Create a virtual environment (optional but recommended):
 
